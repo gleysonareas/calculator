@@ -1,6 +1,7 @@
+import DateTime from "./datetime.js";
 export default class CalculatorControler {
     constructor() {
-        console.log("Calculator Controler");
+        new DateTime();
     }
 }
 //# sourceMappingURL=calculator.controler.js.map
