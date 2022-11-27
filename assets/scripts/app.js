@@ -1,3 +1,3 @@
-"use strict";
-console.log("Começando o projeto");
+import CalculatorControler from "./calculator/calculator.controler.js";
+new CalculatorControler;
 //# sourceMappingURL=app.js.map
