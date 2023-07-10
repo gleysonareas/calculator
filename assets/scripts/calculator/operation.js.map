@@ -1,0 +1,1 @@
+{"version":3,"file":"operation.js","sourceRoot":"","sources":["../../typescript/calculator/operation.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,OAAO,SAAS;IAGlB;IADV,YACU,YAAsB,EAAE;QAAxB,cAAS,GAAT,SAAS,CAAe;IAGlC,CAAC;IACD,GAAG,CAAC,KAAa;QACf,OAAO,IAAI,CAAC,SAAS,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC;IACpC,CAAC;IAED,IAAI,MAAM;QACR,OAAO,IAAI,CAAC,SAAS,CAAC,MAAM,CAAC;IAC/B,CAAC;CACF"}
