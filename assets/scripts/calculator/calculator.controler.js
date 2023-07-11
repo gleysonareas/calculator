@@ -4,7 +4,11 @@ import Operation from "./operation.js";
 export default class CalculatorControler {
     screen;
     operation;
-    constructor(screen = new Screen(), operation = new Operation()) {
+    constructor(screen = new Screen(), operation = new Operation({
+        onCalc: (result) => {
+            this.screen.content = result;
+        }
+    })) {
         this.screen = screen;
         this.operation = operation;
         console.log(this.screen.content);
@@ -56,10 +60,14 @@ export default class CalculatorControler {
                     case 'porcentagem':
                         break;
                     case 'igual':
+                        this.calc();
                         break;
                 }
             });
         });
+    }
+    calc() {
+        this.operation.calc();
     }
     addOperation(value) {
         this.operation.add(value);
