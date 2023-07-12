@@ -16,6 +16,7 @@ export default class CalculatorControler {
     console.log(this.screen.content);
     this.screen.content = "123456789012";
     new DateTime();
+    this.buttonsEvent()
   }
 
   buttonsEvent() {
@@ -78,11 +79,22 @@ export default class CalculatorControler {
   }
 
   addNumber(number: number): void {
+    if (isNaN(Number(this.operation.lastPosition))) {
+      this.operation.add(number.toString());
+    } else {
+      number = Number(this.operation.lastPosition.toString() + number.toString());
+      this.operation.lastPosition = number.toString();
+    }
     this.screen.content = number.toString();
-    this.operation.add(number.toString());
   }
 
   addOperator(operator: string): void {
-    this.addOperation(operator)
+    if (isNaN(Number(this.operation.lastPosition))) {
+      this.operation.lastPosition = operator
+    } else {
+      if (this.operation.length === 0)
+        this.addOperation("0")
+      this.addOperation(operator)
+    }
   }
 }

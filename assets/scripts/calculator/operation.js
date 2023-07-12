@@ -13,9 +13,11 @@ export default class Operation {
         return this.length;
     }
     get lastPosition() {
-        return '0';
+        return this.operation.length ? this.operation[this.operation.length - 1] : '0';
     }
     set lastPosition(value) {
+        const lastIndex = this.operation.length ? this.operation.length - 1 : 0;
+        this.operation[lastIndex] = value;
     }
     get length() {
         return this.operation.length;

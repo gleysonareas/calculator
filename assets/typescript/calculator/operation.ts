@@ -22,11 +22,12 @@ export default class Operation {
   }
 
   get lastPosition(): string {
-    return '0';
+    return this.operation.length ? this.operation[this.operation.length - 1] : '0';
   }
 
   set lastPosition(value: string) {
-
+    const lastIndex = this.operation.length ? this.operation.length - 1 : 0;
+    this.operation[lastIndex] = value;
   }
 
   get length(): number {
